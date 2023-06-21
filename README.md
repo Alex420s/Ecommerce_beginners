@@ -44,6 +44,7 @@ We´re only extending the default code.
 		model = User
 		fields = ('username', 'password1', 'password2')
 ````
+![help!](./img/sign-test.png "Sing up")
 
 
 ***
@@ -69,3 +70,10 @@ Sometimes it gets confusing:
 ## Technologies used in the project: 
 * Django framework and SQLite database which comes by default with Django.
 * Stripe API 
+![help!](./img/stripe.png "Hello Tail")
+
+## User info
+![help!](./img/user-info.png "Hello Tail")
+
+## Cart Item
+![help!](./img/cart-item.png "Hello Tail")
