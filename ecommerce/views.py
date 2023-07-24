@@ -114,28 +114,28 @@ def add_or_remove_item(request):
     cart = ecommerce_manager.cart_object()
 
 #   Released in python 10 
-    match action:
-        case "remove":
-            cart.add_or_remove(action, cart_item)
-            qty = cart_item.quantity
-            stock = stock + qty
-            item.stock = stock
-            item.save()
-            cart_item.quantity = 0
-            cart_item.save()
-        case "add":
-            if stock < quantity:
-                data["message"] = 'Not enough stock'
-                return JsonResponse(data)
-            qty = cart_item.quantity
-            cart.add_or_remove("add", cart_item)
-            stock = stock - quantity
-            item.stock = stock
-            item.save()
-            qty += quantity
-            cart_item.quantity = qty
-            cart_item.save()
-    cart.save()
+    # match action:
+    #     case "remove":
+    #         cart.add_or_remove(action, cart_item)
+    #         qty = cart_item.quantity
+    #         stock = stock + qty
+    #         item.stock = stock
+    #         item.save()
+    #         cart_item.quantity = 0
+    #         cart_item.save()
+    #     case "add":
+    #         if stock < quantity:
+    #             data["message"] = 'Not enough stock'
+    #             return JsonResponse(data)
+    #         qty = cart_item.quantity
+    #         cart.add_or_remove("add", cart_item)
+    #         stock = stock - quantity
+    #         item.stock = stock
+    #         item.save()
+    #         qty += quantity
+    #         cart_item.quantity = qty
+    #         cart_item.save()
+    # cart.save()
 
     item_count=cart.item_count()
     item_total_price=cart.amount()
