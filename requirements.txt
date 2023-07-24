@@ -20,7 +20,8 @@ idna==3.4
 Jinja2==3.1.2
 jinja2-time==0.2.0
 MarkupSafe==2.1.2
-Pillow
+Pillow==10.0.0
+psycopg2-binary==2.9.6
 py-moneyed==2.0
 pycountry==22.3.5
 python-dateutil==2.8.2
