@@ -119,17 +119,17 @@ class Cart(
             count += obj.amount()
         return int(count)
 
-    # def add_or_remove(self, action, object):
-    #     '''
-    #     Used to easily add or remove users to the cart model
-    #     '''
-    #     if
-    #          "add":
-    #             if object not in self.items.all():
-    #                 self.items.add(object)
-    #         case "remove":
-    #             self.items.remove(object)
-    #     self.save()
+    def add_or_remove(self, action, object):
+        '''
+        Used to easily add or remove users to the cart model
+        '''
+        match action:
+            case "add":
+                if object not in self.items.all():
+                    self.items.add(object)
+            case "remove":
+                self.items.remove(object)
+        self.save()
 
     def item_check(self, item):
         '''
